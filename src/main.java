@@ -2,11 +2,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class Main {
+public class main {
     public static void main(String[] args) {
 
-
-        List<Animal> animals = new ArrayList<>();
+        List<animal> animals = new ArrayList<>();
 
         Scanner sc = new Scanner(System.in);
 
@@ -18,24 +17,24 @@ public class Main {
                 case "ADD":
                     System.out.println("Какое животное создать  cat / dog / duck");
                     String animalName = sc.next();
-                    Animal animal;
+                    animal animal;
                     switch (animalName) {
                         case "cat" -> {
-                            animal = new Cat();
+                            animal = new cat();
                             createAnimal(animal, sc);
                             animals.add(animal);
                             animal.say();
 
                         }
                         case "dog" -> {
-                            animal = new Dog();
+                            animal = new dog();
                             createAnimal(animal, sc);
                             animals.add(animal);
                             animal.say();
 
                         }
                         case "duck" -> {
-                            animal = new Duck();
+                            animal = new duck();
                             createAnimal(animal, sc);
                             animals.add(animal);
                             animal.say();
@@ -43,31 +42,22 @@ public class Main {
                         }
                     }
 
-
                     break;
                 case "LIST":
-                    //   cars.forEach(car -> System.out.println(car));
-
-                  for(Animal animal1: animals){
-                      System.out.println(animal1);
-                  }
-
+                    for (animal animal1 : animals) {
+                        System.out.println(animal1);
+                    }
                     break;
                 case "EXIT":
                     System.out.println("выход");
-                    System.exit(1);
+                    System.exit(0);
                     break;
                 default:
                     System.out.println("Неизвестная команда");
             }
-
-
         }
-
-
     }
-
-    public static void createAnimal(Animal animal, Scanner scanner) {
+    public static void createAnimal(animal animal, Scanner scanner) {
         System.out.println("Имя животного");
         animal.setName(scanner.next());
         System.out.println("Введите возраст");
@@ -78,5 +68,4 @@ public class Main {
         animal.setColor(scanner.next());
 
     }
-
 }

@@ -1,50 +1,48 @@
 import java.util.Objects;
 
-public abstract class Animal {
+public abstract class animal {
 
 
     public int weight;
     public int age;
     public String name;
     public String color;
+    public String eat;
+    public String drink;
+    public String go;
+    public String say;
 
-
-
-    public String Eat;
-    public String Drink;
-    public String Go;
-    public String Say;
-
-
-    public String getEat() {return Eat;}
+    public String getEat() {
+        return eat;
+    }
 
     public void setEat(String eat) {
-        Eat = eat;
+        eat = eat;
     }
 
     public String getDrink() {
-        return Drink;
+        return drink;
     }
 
     public void setDrink(String drink) {
-        Drink = drink;
+        drink = drink;
     }
 
     public String getGo() {
-        return Go;
+        return go;
     }
 
-    public void setGo(String go) {Go = go;}
+    public void setGo(String go) {
+        go = go;
+    }
 
     public String getSay() {
-        return Say;
+        return say;
     }
 
-    public void setSay(String say) {Say = say;}
-
-
-
-
+    public void setSay(String say) {
+        say = say;
+    }
 
 
     public String getColor() {
@@ -80,8 +78,6 @@ public abstract class Animal {
     }
 
 
-
-
     protected void say() {
         System.out.println("Привет! меня зовут \"+ name +\", я вешу - \"+ weight +\" кг, мой цвет - \"+ color +\"");
     }
@@ -90,23 +86,18 @@ public abstract class Animal {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Animal animal = (Animal) o;
-        return weight == animal.weight && age == animal.age && color.equals(animal.color) && name.equals(animal.name) && Eat.equals(animal.Eat) && Drink.equals(animal.Drink) && Go.equals(animal.Go) && Say.equals(animal.Say);
+        animal animal = (animal) o;
+        return weight == animal.weight && age == animal.age && color.equals(animal.color) && name.equals(animal.name) && eat.equals(animal.eat) && drink.equals(animal.drink) && go.equals(animal.go) && say.equals(animal.say);
     }
+
 
     @Override
     public int hashCode() {
-        return Objects.hash(color, weight, age, name, Eat, Drink, Go, Say);
+        return Objects.hash(color, weight, age, name, eat, drink, go, say);
     }
 
     @Override
     public String toString() {
-        return "Animal{" +
-                "color='" + color + '\'' +
-                ", weight=" + weight +
-                ", age=" + age +
-                ", name='" + name + '\'' +
-                '}';
+        return "Привет! меня зовут " + name + ", я вешу - " + weight + " кг, мой цвет - " + color + "";
     }
-
 }
