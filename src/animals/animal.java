@@ -1,10 +1,12 @@
+package animals;
+
 import java.util.Objects;
 
 public abstract class animal {
 
 
-    public int weight;
-    public int age;
+    public String weight;
+    public String age;
     public String name;
     public String color;
     public String eat;
@@ -53,21 +55,22 @@ public abstract class animal {
         this.color = color;
     }
 
-    public int getWeight() {
+    public String getWeight() {
         return weight;
     }
 
-    public void setWeight(int weight) {
+    public void setWeight(String weight) {
         this.weight = weight;
     }
 
-    public int getAge() {
+    public String getAge() {
         return age;
     }
 
-    public void setAge(int age) {
-        this.age = age;
-    }
+    public void setAge(String age) {this.age = age;}
+
+
+
 
     public String getName() {
         return name;
@@ -78,7 +81,7 @@ public abstract class animal {
     }
 
 
-    protected void say() {
+    public void say() {
         System.out.println("Привет! меня зовут \"+ name +\", я вешу - \"+ weight +\" кг, мой цвет - \"+ color +\"");
     }
 
@@ -98,6 +101,6 @@ public abstract class animal {
 
     @Override
     public String toString() {
-        return "Привет! меня зовут " + name + ", я вешу - " + weight + " кг, мой цвет - " + color + "";
+        return "Привет! меня зовут " + name + ", мой возраст " + age + ", я вешу - " + weight + " кг, мой цвет - " + color + "";
     }
 }

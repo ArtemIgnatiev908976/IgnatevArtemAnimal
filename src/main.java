@@ -1,3 +1,8 @@
+import animals.animal;
+import animals.pets.cat;
+import animals.pets.dog;
+import animals.pets.duck;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -57,13 +62,14 @@ public class main {
             }
         }
     }
+
     public static void createAnimal(animal animal, Scanner scanner) {
         System.out.println("Имя животного");
         animal.setName(scanner.next());
         System.out.println("Введите возраст");
-        animal.setAge(scanner.nextInt());
+        animal.setAge(scanner.next());
         System.out.println("Введите вес");
-        animal.setWeight(scanner.nextInt());
+        animal.setWeight(scanner.next());
         System.out.println("Введите цвет");
         animal.setColor(scanner.next());
 
