@@ -1,8 +1,8 @@
 package animals.pets;
 
-import animals.animal;
+import animals.Animal;
 
-public class duck extends animal implements flying {
+public class Duck extends Animal implements Flying {
     public void say(){
         fly();
         System.out.println("Кря");

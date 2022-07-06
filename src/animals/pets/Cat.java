@@ -1,6 +1,8 @@
 package animals.pets;
 
-public class cat extends animals.animal {
+import animals.Animal;
+
+public class Cat extends Animal {
     public void say(){
         System.out.println("Мяу");
     }

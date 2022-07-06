@@ -1,8 +1,6 @@
 package animals;
 
-import java.util.Objects;
-
-public abstract class animal {
+public abstract class Animal {
 
 
     public String weight;
@@ -85,19 +83,6 @@ public abstract class animal {
         System.out.println("Привет! меня зовут \"+ name +\", я вешу - \"+ weight +\" кг, мой цвет - \"+ color +\"");
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        animal animal = (animal) o;
-        return weight == animal.weight && age == animal.age && color.equals(animal.color) && name.equals(animal.name) && eat.equals(animal.eat) && drink.equals(animal.drink) && go.equals(animal.go) && say.equals(animal.say);
-    }
-
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(color, weight, age, name, eat, drink, go, say);
-    }
 
     @Override
     public String toString() {

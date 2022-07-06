@@ -1,6 +1,6 @@
 package animals.pets;
 
-public interface flying {
+public interface Flying {
     default void fly() {
         System.out.println("Я лечу");
     }

@@ -1,16 +1,16 @@
-import animals.animal;
-import animals.pets.cat;
-import animals.pets.dog;
-import animals.pets.duck;
+import animals.Animal;
+import animals.pets.Cat;
+import animals.pets.Dog;
+import animals.pets.Duck;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class main {
+public class Main {
     public static void main(String[] args) {
 
-        List<animal> animals = new ArrayList<>();
+        List<Animal> animals = new ArrayList<>();
 
         Scanner sc = new Scanner(System.in);
 
@@ -22,24 +22,24 @@ public class main {
                 case "ADD":
                     System.out.println("Какое животное создать  cat / dog / duck");
                     String animalName = sc.next();
-                    animal animal;
+                    Animal animal;
                     switch (animalName) {
                         case "cat" -> {
-                            animal = new cat();
+                            animal = new Cat();
                             createAnimal(animal, sc);
                             animals.add(animal);
                             animal.say();
 
                         }
                         case "dog" -> {
-                            animal = new dog();
+                            animal = new Dog();
                             createAnimal(animal, sc);
                             animals.add(animal);
                             animal.say();
 
                         }
                         case "duck" -> {
-                            animal = new duck();
+                            animal = new Duck();
                             createAnimal(animal, sc);
                             animals.add(animal);
                             animal.say();
@@ -49,7 +49,7 @@ public class main {
 
                     break;
                 case "LIST":
-                    for (animal animal1 : animals) {
+                    for (Animal animal1 : animals) {
                         System.out.println(animal1);
                     }
                     break;
@@ -63,7 +63,7 @@ public class main {
         }
     }
 
-    public static void createAnimal(animal animal, Scanner scanner) {
+    public static void createAnimal(Animal animal, Scanner scanner) {
         System.out.println("Имя животного");
         animal.setName(scanner.next());
         System.out.println("Введите возраст");
