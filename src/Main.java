@@ -1,7 +1,7 @@
 import animals.Animal;
 import animals.pets.Cat;
 import animals.pets.Dog;
-import animals.pets.Duck;
+import animals.birds.Duck;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -63,13 +63,48 @@ public class Main {
         }
     }
 
+
+
     public static void createAnimal(Animal animal, Scanner scanner) {
         System.out.println("Имя животного");
         animal.setName(scanner.next());
+
+        String age="";
         System.out.println("Введите возраст");
-        animal.setAge(scanner.next());
+        while (age.isEmpty()){
+
+            age = scanner.next();
+            try {
+                Integer.parseInt(age);
+                animal.setAge(age);
+
+            } catch (Exception e){
+                age = "";
+                System.out.println("Введите возраст. Введите число");
+            }
+        }
+
+//        System.out.println("Введите вес");
+//        animal.setName(scanner.next());
+
+        String weight="";
         System.out.println("Введите вес");
-        animal.setWeight(scanner.next());
+        while (weight.isEmpty()){
+
+            weight = scanner.next();
+            try {
+                Integer.parseInt(weight);
+                animal.setWeight(weight);
+
+            } catch (Exception e){
+                weight = "";
+                System.out.println("Введите вес. Введите число");
+            }
+        }
+
+
+//        System.out.println("Введите вес");
+//        animal.setWeight(scanner.next());
         System.out.println("Введите цвет");
         animal.setColor(scanner.next());
 

@@ -1,4 +1,4 @@
-package animals.pets;
+package animals.birds;
 
 public interface Flying {
     default void fly() {

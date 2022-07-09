@@ -3,14 +3,31 @@ package animals;
 public abstract class Animal {
 
 
-    public String weight;
-    public String age;
-    public String name;
-    public String color;
-    public String eat;
-    public String drink;
-    public String go;
-    public String say;
+    private String weight;
+    private String age;
+    private String name;
+    private String color;
+    private String eat;
+    private String drink;
+    private String go;
+    private String say;
+
+
+
+
+    String ageToString (int age)
+    {
+        switch (age % 10) {
+            case 1:
+                return age + " год";
+            case 2:
+            case 3:
+            case 4:
+                return age + " года";
+            default:
+                return age + " лет";
+        }
+    }
 
     public String getEat() {
         return eat;
@@ -62,10 +79,14 @@ public abstract class Animal {
     }
 
     public String getAge() {
+
         return age;
     }
 
-    public void setAge(String age) {this.age = age;}
+    public void setAge(String age) {
+
+        this.age = age;
+    }
 
 
 
@@ -84,8 +105,14 @@ public abstract class Animal {
     }
 
 
+
+
     @Override
     public String toString() {
-        return "Привет! меня зовут " + name + ", мой возраст " + age + ", я вешу - " + weight + " кг, мой цвет - " + color + "";
+
+        return "Привет! меня зовут " + name + ", мой возраст  "+ageToString(Integer.parseInt(age))+" , я вешу - " + weight + " кг, мой цвет - " + color + "";
     }
+
+
+
 }

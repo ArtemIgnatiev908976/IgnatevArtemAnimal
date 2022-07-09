@@ -1,4 +1,4 @@
-package animals.pets;
+package animals.birds;
 
 import animals.Animal;
 
