@@ -98,8 +98,7 @@ public abstract class Animal {
     public void say() {
         System.out.println("Привет! меня зовут \"+ name +\", я вешу - \"+ weight +\" кг, мой цвет - \"+ color +\"");
     }
-
-
+    
     @Override
     public String toString() {
 

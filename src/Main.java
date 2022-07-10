@@ -63,8 +63,6 @@ public class Main {
         }
     }
 
-
-
     public static void createAnimal(Animal animal, Scanner scanner) {
         System.out.println("Имя животного");
         animal.setName(scanner.next());
@@ -83,8 +81,6 @@ public class Main {
                 System.out.println("Введите возраст. Введите число");
             }
         }
-
-
 
         String weight="";
         System.out.println("Введите вес");
