@@ -84,8 +84,7 @@ public class Main {
             }
         }
 
-//        System.out.println("Введите вес");
-//        animal.setName(scanner.next());
+
 
         String weight="";
         System.out.println("Введите вес");
@@ -102,9 +101,6 @@ public class Main {
             }
         }
 
-
-//        System.out.println("Введите вес");
-//        animal.setWeight(scanner.next());
         System.out.println("Введите цвет");
         animal.setColor(scanner.next());
 

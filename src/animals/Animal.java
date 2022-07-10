@@ -13,8 +13,6 @@ public abstract class Animal {
     private String say;
 
 
-
-
     String ageToString (int age)
     {
         switch (age % 10) {
@@ -88,9 +86,6 @@ public abstract class Animal {
         this.age = age;
     }
 
-
-
-
     public String getName() {
         return name;
     }
@@ -105,14 +100,10 @@ public abstract class Animal {
     }
 
 
-
-
     @Override
     public String toString() {
 
-        return "Привет! меня зовут " + name + ", мой возраст  "+ageToString(Integer.parseInt(age))+" , я вешу - " + weight + " кг, мой цвет - " + color + "";
+        return "Привет! меня зовут " + name + ", мой возраст "+ageToString(Integer.parseInt(age))+" , я вешу - " + weight + " кг, мой цвет - " + color + "";
     }
-
-
 
 }
